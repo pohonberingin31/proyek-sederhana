@@ -13,15 +13,18 @@ h1{
 } 
 /* Kotak pembungkus utama agar foto dan teks sejajar ke samping */
 .kartu-profil {
-    display: flex;          /* Membuat foto & teks berderet horizontal */
-    align-items: center;    /* Agar posisi vertikalnya pas di tengah */
-    gap: 30px;              /* Jarak antara foto dan teks */
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 90%;
+    width: 450px;
+    margin: 20px auto;
 }
 
 /* Mengatur ukuran foto supaya tidak terlalu besar */

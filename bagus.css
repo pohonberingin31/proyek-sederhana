@@ -1,30 +1,45 @@
-body{
+body {
     background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* Tambahkan ini biar kalau dibuka di HP tidak bisa digeser ke samping */
+    overflow-x: hidden; 
 }
 
-
-h1{
+h1 {
     color: rgba(10, 10, 211, 0.815);
+}
 
-
-} 
-/* Kotak pembungkus utama agar foto dan teks sejajar ke samping */
+/* Kotak pembungkus utama */
 .kartu-profil {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row; /* Membuat foto & teks berderet menyamping di layar besar */
+    align-items: center; 
+    gap: 30px; 
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    width: 450px;
-    margin: 20px auto;
+    max-width: 800px; /* Batasi lebar maksimal agar tidak terlalu panjang */
+    margin: 50px auto; /* Supaya posisinya otomatis di tengah halaman */
+}
+
+/* Mengatur ukuran foto agar tidak terlalu besar di dalam kartu */
+.kartu-profil img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* KHUSUS UNTUK HP / ANDROID (Layar kecil di bawah 768px) */
+@media screen and (max-width: 768px) {
+    .kartu-profil {
+        flex-direction: column; /* Mengubah susunan jadi ke bawah khusus untuk HP */
+        text-align: center;     /* Teks jadi rata tengah biar cantik */
+        padding: 20px;
+        margin: 20px;
+    }
 }
 
 /* Mengatur ukuran foto supaya tidak terlalu besar */

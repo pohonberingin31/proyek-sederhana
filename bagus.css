@@ -1,0 +1,41 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+h1{
+    color: rgba(10, 10, 211, 0.815);
+
+
+} 
+/* Kotak pembungkus utama agar foto dan teks sejajar ke samping */
+.kartu-profil {
+    display: flex;          /* Membuat foto & teks berderet horizontal */
+    align-items: center;    /* Agar posisi vertikalnya pas di tengah */
+    gap: 30px;              /* Jarak antara foto dan teks */
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+/* Mengatur ukuran foto supaya tidak terlalu besar */
+.foto {
+    width: 200px;           /* Lebar foto diatur jadi lebih pas */
+    height: auto;           /* Tinggi menyesuaikan otomatis */
+    border-radius: 10px;    /* (Opsional) Biar sudut foto agak melengkung */
+}
+
+/* Mengatur teks biodata (hapus margin-left 1000px yang bikin geser jauh) */
+.nama {
+    color: darkcyan;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
